@@ -1,92 +1,100 @@
 @font-face {
-    font-family: "Ubuntu";
-    src: url("./assets/fonts/Ubuntu-Bold.ttf") format("truetype");
-    font-weight: 700;
-    font-style: normal;
-  }
+  font-family: "Ubuntu";
+  src: url("./assets/fonts/Ubuntu-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
 
-  @font-face {
-    font-family: "Ubuntu";
-    src: url("./assets/fonts/Ubuntu-Regular.ttf") format("truetype");
-    font-weight: 400;
-    font-style: normal;
-  }
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./assets/fonts/Ubuntu-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
 
-  .text-ubuntu-bold {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
+.text-ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
-  .text-ubuntu-regular {
-    font-family: "Ubuntu", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
+.text-ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 .gradient-text {
-    font-family: Arial, sans-serif;
-    font-size: 80px;
-    font-weight: bold;
-    background: linear-gradient(90deg, #BBAFFF, #A0055D); 
-    -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
-    text-transform: capitalize;
-  }
+  font-family: Arial, sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #BBAFFF, #A0055D); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent; 
+  text-transform: capitalize;
+}
 
-  .text-80{
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    font-size: 80px;
-  }
+.text-80{
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+}
 
-  .bg-gray{
-    background-color: #1B1B1F;
-  }
-  
-  body, html {
-    margin: 0; 
-    padding: 0;
-    overflow-x: hidden; 
+.bg-gray{
+  background-color: #1B1B1F;
+}
+
+body, html {
+  margin: 0; 
+  padding: 0;
+  overflow-x: hidden; 
 }
 .fixed-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1B1B1F;
-    z-index: 1030; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #1B1B1F;
+  z-index: 1030; 
 }
 .content {
-    margin-top: 150px;
+  margin-top: 150px;
+}
+
+.content-tool {
+margin-top: 120px;
 }
 
 .box {
-    border: 0px solid black;
-    border-radius: 15px; 
-    background-color: #202127;
+  border: 0px solid black;
+  border-radius: 15px; 
+  background-color: #202127;
 }
 
 .photo-box {
-    border: 2px solid  white;
+  border: 2px solid  white;
 }
 
 .text-22 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .text-18 {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 .text-12 {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 .text-gray {
-    color:#9A9A9B;
+  color:#9A9A9B;
 }
 
 .text-blue {
-    color: #9BB1FF;
+  color: #9BB1FF;
+}
+
+.no-decorate {
+text-decoration: none;
 }
