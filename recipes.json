@@ -2,9 +2,15 @@
     "recipes": [
         {
             "id": "1",
-            "title": "recipe1",
-            "author": "sergeen",
+            "title": "Tahini Pancake",
+            "author": "Sergen.13",
             "path": "./articles/recipe1.md"
+        },
+        {
+            "id": "2",
+            "title": "Protein bar",
+            "author": "Sergen.13",
+            "path": "./articles/recipe2.md"
         }
     ]
 }
