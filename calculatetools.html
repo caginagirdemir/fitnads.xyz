@@ -257,7 +257,10 @@
             const log10 = (value) => Math.log10(value); 
             const numerator = 495;
             const denominator = 1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height);
-            document.getElementById('bfr-result').innerText = (numerator / denominator) - 450 + " %";
+            const fatRateResult = (numerator / denominator) - 450;
+            document.getElementById('bfr-result').innerText = fatRateResult.toFixed(2) + " %";
+
+            document.getElementById("fat-rate").value = fatRateResult.toFixed(2);
         }
 
       
