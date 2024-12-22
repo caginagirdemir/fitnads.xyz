@@ -60,8 +60,6 @@
 
     async function renderMarkdownFromServer(jsonFilePath) {
     try {
-     
-
         const markdownResponse = await fetch(jsonFilePath);
         if (!markdownResponse.ok) {
             throw new Error("Failed to fetch Markdown file.");
