@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit-Nad</title>
+    <link rel="stylesheet" href="./index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="bg-gray">
+    <div class="fixed-header shadow-sm py-2">
+        <div class="container d-flex align-items-center">
+            <img src="assets/imgs/logo.png" style="width: 64px;" class="me-3">
+            <h2 class="text-white text-ubuntu-bold m-0">Fit Nads</h2>
+        </div>
+    </div>
+
+    <div class="content-tool container text-white ">
+        <div class="row ">
+            <div class="col-12">
+                <h6 class="text-ubuntu-regular text-blue">
+                    <a href="index.html" class="no-decorate">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
+                          </svg>
+                        back
+                    </a>
+                </h6>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-12">
+                <h1 class="text-ubuntu-regular">Articles</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <div class="container-fluid text-start ">
+                    <div class="row p-0">
+                        <div class="col-12 p-0">
+                            <ol class="list-group list-group-numbered p-0 list-group-flush" id="olElement">
+                                <!--recipes-->
+                            </ol>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-9">
+                <div id="recipeContainer"></div>
+            </div>
+           
+        </div>
+    </div>
+    <br />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+
+    let selectedItem = null;
+
+
+    async function renderMarkdownFromServer(jsonFilePath) {
+    try {
+        const markdownResponse = await fetch(jsonFilePath);
+        if (!markdownResponse.ok) {
+            throw new Error("Failed to fetch Markdown file.");
+        }
+        const markdownContent = await markdownResponse.text();
+
+        const htmlContent = marked.parse(markdownContent);
+
+        const outputContainer = document.getElementById("recipeContainer");
+        outputContainer.innerHTML = htmlContent;
+    } catch (error) {
+        console.error("Error:", error);
+        const outputContainer = document.getElementById("recipeContainer");
+        outputContainer.innerHTML = `<p style="color: red;">Error: ${error.message}</p>`;
+    }
+}
+
+
+    function fetchJSONData() {
+        let olElem = document.getElementById("olElement");
+        olElem.innerHTML = "";
+
+        fetch("./articles.json?version=" + new Date().getTime())
+            .then((res) => {
+                if (!res.ok) {
+                    throw new Error(`HTTP error! Status: ${res.status}`);
+                }
+                return res.json();
+            })
+            .then((data) => {
+                allData = data.recipes;
+                console.log(allData);
+                populateList(allData);
+            })
+            .catch((error) => console.error("Unable to fetch data:", error));
+    }
+
+
+    function populateList(recipes) {
+        let olElem = document.getElementById("olElement");
+        olElem.innerHTML = "";
+
+        recipes.forEach((recipes, i) => {
+            let liElem = document.createElement("li");
+            liElem.setAttribute("class", "list-group-item d-flex justify-content-between align-items-start bg-purple");
+            liElem.setAttribute("id", "recipe" + i);
+
+            let divElem = document.createElement("div");
+            divElem.setAttribute("class", "ms-2 me-auto");
+
+            let divSubElem1 = document.createElement("div");
+            divSubElem1.setAttribute("class", "fw-bold");
+            divSubElem1.innerText = recipes.title;
+
+            let divSubElem2 = document.createElement("div");
+            divSubElem2.innerText = "Author @" + recipes.author;
+
+            divElem.appendChild(divSubElem1);
+            divElem.appendChild(divSubElem2);
+
+            liElem.appendChild(divElem);
+            olElem.appendChild(liElem);
+
+            liElem.addEventListener("click", () => {
+                selectItem(liElem);
+                onItemSelected(recipes); 
+            });
+        });
+    }
+
+function selectItem(item) {
+    if (selectedItem) {
+        selectedItem.setAttribute("style", "background-color: #212529 !important;");
+    }
+    item.setAttribute("style", "background-color: #4C585B !important;");
+    selectedItem = item;
+}
+
+
+async function onItemSelected(recipe) {
+    console.log(recipe);
+    try {
+        renderMarkdownFromServer(recipe.path)
+
+    } catch (error) {
+        console.error("Error loading recipe:", error);
+    }
+}
+
+
+fetchJSONData();
+    </script>
+</body>
+</html>
