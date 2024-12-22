@@ -1,0 +1,35 @@
+﻿# Protein Bar Nutritional 
+
+[![Image](https://i.hizliresim.com/lkzjdpt.jpg)](https://hizliresim.com/lkzjdpt)
+
+### Protein Bar Nutritional Values ​​Per Serving (6 servings are obtained with these values )
+
+- Calories, kcal 345
+- Protein, g 20.5
+- Carbohydrate, g 41.6
+- Fat, g 10.7
+
+### Protein Bar Recipe Ingredients:
+
+- 2 bowls of oatmeal
+- 5 eggs
+- 3 medium bananas
+- 2 scoops of protein powder
+- 3 tablespoons of peanut butter
+- 100ml milk
+
+### How to Make Protein Bar, Protein Chocolate?
+
+1- Oatmeal (in flour form), protein powder, peanut butter are kneaded well in a bowl.
+2- Bananas are mashed and added to the mixture. Eggs are broken on top.
+3- Milk is added and kneaded again.
+4- Baking paper is placed on the baking tray and the mixture is poured on it.
+5- Bake in the oven preheated to 180 degrees for 20 minutes.
+6- Your chocolate and banana protein bar is ready, bon appetit!
+
+
+
+
+
+
+
