@@ -180,6 +180,82 @@
 
             <div class="col-1"></div> <!--Separeater-->
 
+            <div class="col-md-3 col-sm-12 my-2">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            <button class="btn btn-outline-light" disabled>Daily Macronutrient Needs</button>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <div class="input-group bg-dark">
+                                <span class="input-group-text" id="basic-addon2">fat-free mass</span>
+                                <input type="number" value="0"  min="0" step="1" class="form-control" id="fat-free">
+                                <span class="input-group-text" id="basic-addon2">kg</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <div class="input-group bg-dark">
+                                <span class="input-group-text" id="basic-addon2">calories</span>
+                                <input type="number" value="0"  min="0" step="1" class="form-control" id="calories">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="input-group bg-dark">
+                                <span class="input-group-text" id="basic-addon2">protein</span>
+                                <input type="number" value="0"  min="0" step="1" class="form-control" id="protein">
+                                <span class="input-group-text" id="basic-addon2">gr</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <div class="input-group bg-dark">
+                                <span class="input-group-text" id="basic-addon2">fat</span>
+                                <input type="number" value="0"  min="0" step="1" class="form-control" id="fat">
+                                <span class="input-group-text" id="basic-addon2">gr</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12 mt-2">
+                            <button class="btn btn-outline-success" onclick="calculateDailyMacronutrient()">Calculate</button>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <span class="text-ubuntu-regular">Results </span>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <span class="text-ubuntu-regular">During Fat Burning </span>
+                        </div>
+                        <div class="col-12">
+                            <span class="text-ubuntu-regular">👉 Protein : </span> <span id="protein-fat-result" class="text-ubuntu-regular"></span>
+                        </div>
+                        <div class="col-12">
+                            <span class="text-ubuntu-regular">👉 Fat : </span> <span id="fat-fat-result" class="text-ubuntu-regular"></span>
+                        </div>
+                        <div class="col-12">
+                            <span class="text-ubuntu-regular">👉 Carbohydrates  : </span> <span id="carbohydrates-fat-result" class="text-ubuntu-regular"></span>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <span class="text-ubuntu-regular">During Msucle Gain </span>
+                        </div>
+                        <div class="col-12">
+                            <span class="text-ubuntu-regular">👉 Protein : </span> <span id="protein-muscle-result" class="text-ubuntu-regular"></span>
+                        </div>
+                        <div class="col-12">
+                            <span class="text-ubuntu-regular">👉 Fat : </span> <span id="fat-muscle-result" class="text-ubuntu-regular"></span>
+                        </div>
+                        <div class="col-12">
+                            <span class="text-ubuntu-regular">👉 Carbohydrates  : </span> <span id="carbohydrates-muscle-result" class="text-ubuntu-regular"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
  
@@ -191,6 +267,8 @@
             const denominator = 1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height);
             document.getElementById('bfr-result').innerText = (numerator / denominator) - 450 + " %";
         }
+
+      
 
         function calculateDailyCalories() {
             const genderFactor = parseFloat(document.querySelector("#gender").value); 
@@ -211,6 +289,34 @@
             document.getElementById("bmr-lose-weight-result").innerText = loseWeightCalories.toFixed(2) + " kcal";
             document.getElementById("bmr-gain-muscle-result").innerText = gainMuscleCalories.toFixed(2) + " kcal";
         }
+
+        function calculateDailyMacronutrient() {
+            const fatFree = parseFloat(document.getElementById("fat-free").value); 
+            const calories = parseFloat(document.getElementById("calories").value); 
+            const protein = parseFloat(document.getElementById("protein").value); 
+            const fat = parseFloat(document.getElementById("fat").value); 
+
+            const proteinFat = fatFree * 2.5;
+            const proteinMuscle = fatFree * 1.7;
+
+            const fatFat = fatFree * 1;
+            const fatMuscle = calories / 35;
+
+            const carbohydratesFat = (calories - (protein*4 + fat*9)) / 4;
+            const carbohydratesMuscle = (calories - (protein*4 + fat*9)) / 4;
+
+            document.getElementById("protein-fat-result").innerText = proteinFat.toFixed(2) + " gr";
+            document.getElementById("protein-muscle-result").innerText = proteinMuscle.toFixed(2) + " gr";
+
+            document.getElementById("fat-fat-result").innerText = fatFat.toFixed(2) + " gr";
+            document.getElementById("fat-muscle-result").innerText = fatMuscle.toFixed(2) + " gr";
+
+            document.getElementById("carbohydrates-fat-result").innerText = carbohydratesFat.toFixed(2) + " gr";
+            document.getElementById("carbohydrates-muscle-result").innerText = carbohydratesMuscle.toFixed(2) + " gr";
+        }
+
+
+
 
     </script>
 </body>

@@ -1,0 +1,16 @@
+{
+    "recipes": [
+        {
+            "id": "1",
+            "title": "recipe1",
+            "author": "sergeen",
+            "path": "./articles/test.md"
+        },
+        {
+            "id": "2",
+            "title": "recipe2",
+            "author": "sergeen",
+            "path": "./articles/test2.md"
+        }
+    ]
+}
