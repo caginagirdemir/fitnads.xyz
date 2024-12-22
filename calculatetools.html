@@ -180,6 +180,7 @@
 
             <div class="col-1"></div> <!--Separeater-->
 
+            <!--DMN-->
             <div class="col-md-3 col-sm-12 my-2">
                 <div class="container-fluid">
                     <div class="row">
@@ -190,8 +191,17 @@
                     <div class="row my-2">
                         <div class="col-12">
                             <div class="input-group bg-dark">
-                                <span class="input-group-text" id="basic-addon2">fat-free mass</span>
-                                <input type="number" value="0"  min="0" step="1" class="form-control" id="fat-free">
+                                <span class="input-group-text" id="basic-addon2">fat rate</span>
+                                <input type="number" value="0"  min="0" step="1" class="form-control" id="fat-rate">
+                                <span class="input-group-text" id="basic-addon2">%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <div class="input-group bg-dark">
+                                <span class="input-group-text" id="basic-addon2">weight</span>
+                                <input type="number" value="0"  min="0" step="1" class="form-control" id="dmn-weight">
                                 <span class="input-group-text" id="basic-addon2">kg</span>
                             </div>
                         </div>
@@ -201,24 +211,6 @@
                             <div class="input-group bg-dark">
                                 <span class="input-group-text" id="basic-addon2">calories</span>
                                 <input type="number" value="0"  min="0" step="1" class="form-control" id="calories">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="input-group bg-dark">
-                                <span class="input-group-text" id="basic-addon2">protein</span>
-                                <input type="number" value="0"  min="0" step="1" class="form-control" id="protein">
-                                <span class="input-group-text" id="basic-addon2">gr</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row my-2">
-                        <div class="col-12">
-                            <div class="input-group bg-dark">
-                                <span class="input-group-text" id="basic-addon2">fat</span>
-                                <input type="number" value="0"  min="0" step="1" class="form-control" id="fat">
-                                <span class="input-group-text" id="basic-addon2">gr</span>
                             </div>
                         </div>
                     </div>
@@ -291,10 +283,13 @@
         }
 
         function calculateDailyMacronutrient() {
-            const fatFree = parseFloat(document.getElementById("fat-free").value); 
+            const fatRate = parseFloat(document.getElementById("fat-rate").value); 
+            const dmnWeight = parseFloat(document.getElementById("dmn-weight").value); 
+            const fatFree = ((100 - fatRate) * dmnWeight)/100;
+
             const calories = parseFloat(document.getElementById("calories").value); 
-            const protein = parseFloat(document.getElementById("protein").value); 
-            const fat = parseFloat(document.getElementById("fat").value); 
+            const protein = fatFree * 2.5; 
+            const fat = fatFree; 
 
             const proteinFat = fatFree * 2.5;
             const proteinMuscle = fatFree * 1.7;
