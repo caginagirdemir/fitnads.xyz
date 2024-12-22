@@ -4,13 +4,13 @@
             "id": "1",
             "title": "Tahini Pancake",
             "author": "Sergen.13",
-            "path": "./articles/recipe1.md"
+            "path": "./recipes/recipe1.md"
         },
         {
             "id": "2",
             "title": "Protein bar",
             "author": "Sergen.13",
-            "path": "./articles/recipe2.md"
+            "path": "./recipes/recipe2.md"
         }
     ]
 }
