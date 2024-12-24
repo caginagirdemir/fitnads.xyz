@@ -5,11 +5,16 @@
             "title": "artice1",
             "author": "Sergen.13",
             "path": "./articles/article1.md"
-        }, {
+        },{
             "id": "2",
             "title": "artice2",
             "author": "Sergen.13",
             "path": "./articles/bestsuplements.md"
+        },{
+            "id": "3",
+            "title": "artice3",
+            "author": "Sergen.13",
+            "path": "./articles/Nutritionguide.md"
         }
     ]
 }
