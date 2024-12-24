@@ -5,6 +5,11 @@
             "title": "artice1",
             "author": "Sergen.13",
             "path": "./articles/article1.md"
+        }, {
+            "id": "1",
+            "title": "artice1",
+            "author": "Sergen.13",
+            "path": "./bestsuplements.md"
         }
     ]
 }
