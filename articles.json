@@ -30,6 +30,11 @@
             "title": "Everything about Omega-3",
             "author": "Sergen.13",
             "path": "./articles/Omega3.md"
+        },{
+            "id": "8",
+            "title": "Vitamin C",
+            "author": "Sergen.13",
+            "path": "./articles/VitaminC.md"
         }
     ]
 }
