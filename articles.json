@@ -25,6 +25,10 @@
             "title": "Vitamin D and Sunlight Relationship",
             "author": "Sergen.13",
             "path": "./articles/VıtaminDs-Sunrays.md"
-        }
+        },{
+            "id": "7",
+            "title": "Everything about Omega-3",
+            "author": "Sergen.13",
+            "path": "./articles/Omega3.md"
     ]
 }
