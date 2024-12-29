@@ -21,9 +21,14 @@
                                     <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
                                   </svg>
                                 You can get free consultancy from Sergen. Contact him via dm on Discord.
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
+                                 <!-- Bi-Caret-Down -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16" id="caret-down" style="display: inline;">
                                     <path d="M3.204 5h9.592L8 10.481zm-.753.659 4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659"/>
-                                  </svg>
+                                </svg>
+                                <!-- Bi-Caret-Up -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up" viewBox="0 0 16 16" id="caret-up" style="display: none;">
+                                    <path d="M3.204 11h9.592L8 5.519zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659"/>
+                                </svg>
                             </h6>
                         </button>
                       </p>
@@ -272,5 +277,25 @@
     </div>
     <br />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const collapseButton = document.querySelector("[data-bs-toggle='collapse']");
+            const caretDown = document.getElementById("caret-down");
+            const caretUp = document.getElementById("caret-up");
+
+            collapseButton.addEventListener("click", function () {
+                const isCollapsed = caretDown.style.display === "inline";
+
+                if (isCollapsed) {
+                    caretDown.style.display = "none";
+                    caretUp.style.display = "inline";
+                } else {
+                    caretDown.style.display = "inline";
+                    caretUp.style.display = "none";
+                }
+            });
+        });
+
+    </script>
 </body>
 </html>
