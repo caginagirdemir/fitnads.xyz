@@ -45,11 +45,11 @@
 }
 
 .bg-black {
-  background-color: #121215;
+  background-color: #121215 !important;
 }
 
 .custom-collapse {
-  background-color: #000000;
+  background-color: #000000 !important;
   border: 0px solid #ddd;   
   padding: 10px;            
 }
