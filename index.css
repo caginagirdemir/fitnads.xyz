@@ -44,6 +44,27 @@
   background-color: #1B1B1F;
 }
 
+.bg-black {
+  background-color: #121215;
+}
+
+.custom-collapse {
+  background-color: #000000;
+  border: 0px solid #ddd;   
+  padding: 10px;            
+}
+
+.custom-collapse .card-body {
+  background-color: #000000 !important;
+  color: #fff;                         
+  border: none;                         
+}
+
+
+.btn-gray {
+  color: #1B1B1F;
+}
+
 body, html {
   margin: 0; 
   padding: 0;
