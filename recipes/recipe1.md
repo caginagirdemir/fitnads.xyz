@@ -18,23 +18,16 @@
 - 1 teaspoon cinnamon
 - Coconut oil for cooking (a different oil can also be used or cooked without oil.)
 
-### How to Make Diet-Friendly Tahini Pancakes
-1. Roast the sesame seeds on medium heat for 3 minutes and set aside.
-2. After thoroughly mashing the banana with a fork and making it puree, we break the eggs on top.
-3. After adding tahini and a little cinnamon, we mix well.
-4. Melt some oil in the pan and cook our pancakes.
-5. After stacking the pancakes, pour some honey on top and sprinkle the toasted sesame seeds.
+<details>
+    <summary><strong>How to Make Diet-Friendly Tahini Pancakes</strong></summary>
+    <ul>
+        <li>Roast the sesame seeds on medium heat for 3 minutes and set aside.</li>
+        <li>After thoroughly mashing the banana with a fork and making it puree, we break the eggs on top.</li>
+        <li>After adding tahini and a little cinnamon, we mix well.</li>
+        <li>Melt some oil in the pan and cook our pancakes.</li>
+        <li>After stacking the pancakes, pour some honey on top and sprinkle the toasted sesame seeds.</li>
+    </ul>
+</details>
 
 Enjoy! 🙂
 
-<details>
-    <summary><strong>What is Document360?</strong></summary>
-    <p>A well-structured product to create a world-class knowledge base for your customers and employees. Content producers get the power, whereas content consumers get the simplicity.</p>
-    <h4>Core parts</h4>
-    <ul>
-        <li>Knowledge base portal</li>
-        <li>Knowledge base site</li>
-        <li>Knowledge base widget</li>
-        <li>API documentation</li>
-    </ul>
-</details>
