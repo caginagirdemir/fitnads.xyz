@@ -140,9 +140,8 @@ function selectItem(item) {
 
 
 async function onItemSelected(recipe) {
-    console.log(recipe);
     try {
-        renderMarkdownFromServer(recipe.path)
+        renderMarkdownFromServer(recipe.path  + "?version=" + new Date().getTime())
 
     } catch (error) {
         console.error("Error loading recipe:", error);
