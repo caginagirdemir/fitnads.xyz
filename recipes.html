@@ -140,7 +140,6 @@ function selectItem(item) {
 
 
 async function onItemSelected(recipe) {
-    console.log(recipe);
     try {
         renderMarkdownFromServer(recipe.path + "?version=" + new Date().getTime())
 
