@@ -26,3 +26,15 @@
 5. After stacking the pancakes, pour some honey on top and sprinkle the toasted sesame seeds.
 
 Enjoy! 🙂
+
+<details>
+    <summary><strong>What is Document360?</strong></summary>
+    <p>A well-structured product to create a world-class knowledge base for your customers and employees. Content producers get the power, whereas content consumers get the simplicity.</p>
+    <h4>Core parts</h4>
+    <ul>
+        <li>Knowledge base portal</li>
+        <li>Knowledge base site</li>
+        <li>Knowledge base widget</li>
+        <li>API documentation</li>
+    </ul>
+</details>
