@@ -20,17 +20,17 @@
 
 ### How to Make Protein Bar, Protein Chocolate?
 
-#### 1️⃣- Oatmeal (in flour form), protein powder, peanut butter are kneaded well in a bowl.
+1️⃣- Oatmeal (in flour form), protein powder, peanut butter are kneaded well in a bowl.
 
-#### 2️⃣- Bananas are mashed and added to the mixture. Eggs are broken on top.
+2️⃣- Bananas are mashed and added to the mixture. Eggs are broken on top.
 
-#### 3️⃣- Milk is added and kneaded again.
+3️⃣- Milk is added and kneaded again.
 
-#### 4️⃣- Baking paper is placed on the baking tray and the mixture is poured on it.
+4️⃣- Baking paper is placed on the baking tray and the mixture is poured on it.
 
-#### 5️⃣- Bake in the oven preheated to 180 degrees for 20 minutes.
+5️⃣- Bake in the oven preheated to 180 degrees for 20 minutes.
 
-#### 6️⃣- Your chocolate and banana protein bar is ready, bon appetit!
+6️⃣- Your chocolate and banana protein bar is ready, bon appetit!
 
 
 
