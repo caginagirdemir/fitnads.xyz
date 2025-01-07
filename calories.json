@@ -1,0 +1,18 @@
+{
+    "calories": [
+        {
+            "food": "food1",
+            "calories": "500",
+            "kh": "123",
+            "protein": "100",
+            "fat": "150"
+        },
+        {
+            "food": "food2",
+            "calories": "600",
+            "kh": "456",
+            "protein": "100",
+            "fat": "150"
+        }
+    ]
+}
