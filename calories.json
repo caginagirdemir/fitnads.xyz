@@ -19,6 +19,78 @@
             "kh": "0",
             "protein": "23,5",
             "fat": "0,7"
+        }{
+            "food": "Salmon(100gr)",
+            "calories": "208",
+            "kh": "0",
+            "protein": "20",
+            "fat": "13"
+        }{
+            "food": "Salmon(100gr)",
+            "calories": "208",
+            "kh": "0",
+            "protein": "20",
+            "fat": "13"
+        }{
+            "food": "Beef(Low Fat)",
+            "calories": "156",
+            "kh": "0",
+            "protein": "18,6",
+            "fat": "8,58"
+        }{
+            "food": "Rice(Uncooked 100gr)",
+            "calories": "130",
+            "kh": "28",
+            "protein": "2,7",
+            "fat": "0,3"
+        }{
+            "food": "Whole Wheat Bread(100gr)",
+            "calories": "247",
+            "kh": "41",
+            "protein": "2,7",
+            "fat": "13"
+        }{
+            "food": "Beef(Low Fat)",
+            "calories": "156",
+            "kh": "0",
+            "protein": "18,6",
+            "fat": "8,58"
+        }{
+            "food": "Beef(Low Fat)",
+            "calories": "156",
+            "kh": "0",
+            "protein": "18,6",
+            "fat": "8,58"
+        }{
+            "food": "Beef(Low Fat)",
+            "calories": "156",
+            "kh": "0",
+            "protein": "18,6",
+            "fat": "8,58"
+        }{
+            "food": "Beef(Low Fat)",
+            "calories": "156",
+            "kh": "0",
+            "protein": "18,6",
+            "fat": "8,58"
+        }{
+            "food": "Beef(Low Fat)",
+            "calories": "156",
+            "kh": "0",
+            "protein": "18,6",
+            "fat": "8,58"
+        }{
+            "food": "Beef(Low Fat)",
+            "calories": "156",
+            "kh": "0",
+            "protein": "18,6",
+            "fat": "8,58"
+        }{
+            "food": "Beef(Low Fat)",
+            "calories": "156",
+            "kh": "0",
+            "protein": "18,6",
+            "fat": "8,58"
         }
     ]
 }
