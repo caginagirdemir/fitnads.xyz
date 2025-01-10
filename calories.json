@@ -13,6 +13,12 @@
             "kh": "456",
             "protein": "100",
             "fat": "150"
+        }{
+            "food": "Chicken Breast(100gr)",
+            "calories": "102",
+            "kh": "0",
+            "protein": "23,5",
+            "fat": "0,7"
         }
     ]
 }
