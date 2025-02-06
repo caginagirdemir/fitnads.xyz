@@ -72,13 +72,40 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row my-2">
+                        <div class="col-12">
+                            <div class="input-group bg-dark">
+                                <span class="input-group-text" id="basic-addon2">weight</span>
+                                <input type="number" value="0"  min="0" step="1" class="form-control" id="weight-bfr">
+                                <span class="input-group-text" id="basic-addon2">kg</span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row mt-3">
                         <div class="col-12">
-                            <button class="btn btn-outline-success" onclick="calculateBFP(document.getElementById('waist').value, document.getElementById('neck').value, document.getElementById('height-bfr').value)">Calculate</button>
+                            <button class="btn btn-outline-success" onclick="calculateBFP(document.getElementById('waist').value, document.getElementById('neck').value, document.getElementById('height-bfr').value, document.getElementById('weight-bfr').value)">Calculate</button>
                         </div>
-                        <div class="col-12 mt-2">
-                            <span class="text-ubuntu-regular">Result: </span> <span id="bfr-result" class="text-ubuntu-regular"></span>
+                        <div class="row mt-2">
+                            <div class="col-12 mt-2">
+                                <span class="text-ubuntu-regular">Results </span>
+                            </div>
+                            <div class="col-12">
+                                <span class="text-ubuntu-regular">👉 body fat rate : </span> <span id="bfr-result" class="text-ubuntu-regular"></span>
+                            </div>
+                            <div class="col-12">
+                                <span class="text-ubuntu-regular">👉 Omega3 [DHA] : </span> <span id="omega3dha" class="text-ubuntu-regular"></span>
+                            </div>
+                            <div class="col-12">
+                                <span class="text-ubuntu-regular">👉 Omega3 [EPA] : </span> <span id="omega3epa" class="text-ubuntu-regular"></span>
+                            </div>
+                            <div class="col-12">
+                                <span class="text-ubuntu-regular">👉 Vitamin C : </span> <span id="vitaminc" class="text-ubuntu-regular"></span>
+                            </div>
+                            <div class="col-12">
+                                <span class="text-ubuntu-regular">👉 Vitamin D : </span> <span id="vitamind" class="text-ubuntu-regular"></span>
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -253,7 +280,7 @@
  
     <br />
     <script>
-        function calculateBFP(waist, neck, height) {
+        function calculateBFP(waist, neck, height, weight) {
             const log10 = (value) => Math.log10(value); 
             const numerator = 495;
             const denominator = 1.0324 - 0.19077 * log10(waist - neck) + 0.15456 * log10(height);
@@ -261,6 +288,11 @@
             document.getElementById('bfr-result').innerText = fatRateResult.toFixed(2) + " %";
 
             document.getElementById("fat-rate").value = fatRateResult.toFixed(2);
+
+            document.getElementById("omega3dha").innerText = weight*15*(1/3).toFixed(2);
+            document.getElementById("omega3epa").innerText = weight*15*(2/3).toFixed(1);
+            document.getElementById("vitamind").innerText = weight*15;
+            document.getElementById("vitaminc").innerText = weight*3;
         }
 
       

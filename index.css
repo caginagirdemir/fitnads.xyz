@@ -150,3 +150,7 @@ text-decoration: none;
 .list-group::-webkit-scrollbar-thumb:hover {
   background-color: #aaa; 
 }
+
+.text-red {
+  color: #A0055D;
+}
