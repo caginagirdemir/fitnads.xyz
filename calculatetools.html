@@ -252,7 +252,7 @@
                             <span class="text-ubuntu-regular">👉 Carbohydrates  : </span> <span id="carbohydrates-muscle-result" class="text-ubuntu-regular"></span>
                         </div>
                         <div class="col-12 mt-2">
-                            <span class="text-ubuntu-regular">Daily Micronutritient Needs</span>
+                            <span class="text-ubuntu-regular">Daily Micronutrient Needs</span>
                         </div>
                         <div class="col-12">
                             <span class="text-ubuntu-regular">👉 Omega3 [DHA] : </span> <span id="omega3dha" class="text-ubuntu-regular"></span>
@@ -335,10 +335,10 @@
             document.getElementById("carbohydrates-fat-result").innerText = carbohydratesFat.toFixed(2) + " gr";
             document.getElementById("carbohydrates-muscle-result").innerText = carbohydratesMuscle.toFixed(2) + " gr";
 
-            document.getElementById("omega3dha").innerText = dmnWeight*15*(1/3).toFixed(2);
-            document.getElementById("omega3epa").innerText = dmnWeight*15*(2/3).toFixed(1);
-            document.getElementById("vitamind").innerText = dmnWeight*15;
-            document.getElementById("vitaminc").innerText = dmnWeight*3;
+            document.getElementById("omega3dha").innerText = dmnWeight*15*(1/3).toFixed(2) + " mg";
+            document.getElementById("omega3epa").innerText = dmnWeight*15*(2/3).toFixed(1) + " mg";
+            document.getElementById("vitamind").innerText = dmnWeight*15 + " IU";
+            document.getElementById("vitaminc").innerText = dmnWeight*3 + " mg";
         }
 
 
